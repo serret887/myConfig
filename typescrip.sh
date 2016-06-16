@@ -1,3 +1,8 @@
+sudo npm cahe clean -f
+sudo npm install -g n
+sudo npm update -g
+
+
 echo "installing the typescript"
 
 sudo npm install -g typescript
