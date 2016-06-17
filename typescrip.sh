@@ -6,6 +6,7 @@ sudo npm update -g
 echo "installing the typescript"
 
 sudo npm install -g typescript
+sudo npm install -g tsd
 
 echo "installing the typescript watch"
 
@@ -16,11 +17,11 @@ sudo npm install -g gulp
 
 echo "installing GULP for typescript"
 sudo npm install -g gulp-typescript
-
+sudo npm install -g eslint
 echo "installing to work with angular 2"
 
 sudo npm install -g angular-cli
-
+sudo npm install typings --global
 echo "configuring to work with emacs hahahahaha"
 
 
