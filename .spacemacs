@@ -13,7 +13,7 @@ values."
    dotspacemacs-distribution 'spacemacs
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
-  dotspacemacs-configuration-layer-path '()
+   dotspacemacs-configuration-layer-path '()
    ;; List of configuration layers to load. If it is the symbol `all' instead
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
@@ -31,16 +31,16 @@ values."
         java
         html
         apex-mode
-        tide
      ;; markdown
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
-     ;;spell-checking
+     spell-checking
      ;; syntax-checking
-        version-control
-        typescript
+     version-control
+     tide
+     typescript
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -73,7 +73,7 @@ values."
    ;; Maximum allowed time in seconds to contact an ELPA repository.
    dotspacemacs-elpa-timeout 5
    ;; If non nil then spacemacs will check for updates at startup
-  ;; when the current branch is not `develop'. (default t)
+   ;; when the current branch is not `develop'. (default t)
    dotspacemacs-check-for-update t
    ;; One of `vim', `emacs' or `hybrid'. Evil is always enabled but if the
    ;; variable is `emacs' then the `holy-mode' is enabled at startup. `hybrid'
@@ -82,7 +82,7 @@ values."
    dotspacemacs-editing-style 'emacs
    ;; If non nil output loading progress in `*Messages*' buffer. (default nil)
    dotspacemacs-verbose-loading nil
-  ;; Specify the startup banner. Default value is `official', it displays
+   ;; Specify the startup banner. Default value is `official', it displays
    ;; the official spacemacs logo. An integer value is the index of text
    ;; banner, `random' chooses a random text banner in `core/banners'
    ;; directory. A string value must be a path to an image format supported
@@ -94,7 +94,7 @@ values."
    ;; (default '(recents projects))
    dotspacemacs-startup-lists '(recents projects)
    ;; Number of recent files to show in the startup buffer. Ignored if
-  ;; `dotspacemacs-startup-lists' doesn't include `recents'. (default 5)
+   ;; `dotspacemacs-startup-lists' doesn't include `recents'. (default 5)
    dotspacemacs-startup-recent-list-size 10
    ;; Default major mode of the scratch buffer (default `text-mode')
    dotspacemacs-scratch-mode 'text-mode
@@ -243,7 +243,7 @@ values."
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init', before layer configuration
 executes.
-This function is mostly useful for variables that need to be set
+ This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
 
@@ -264,7 +264,7 @@ you should place your code here."
 
   ;;show lines of numbers by default
   (global-linum-mode)
-  (global-flycheck-mode)
+
   ;; this line deleted all the whitespaces
   (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
@@ -280,7 +280,7 @@ you should place your code here."
   (setq-default fill-column 80)
   (setq fill-column 80)
 
-;;  (add-to-list 'auto-mode-alist '("\\.cls\\'" . java-mode))
+  ;;  (add-to-list 'auto-mode-alist '("\\.cls\\'" . java-mode))
 ;;  (add-to-list 'auto-mode-alist '("\\.trigger\\'" . java-mode))
 
   (define-global-minor-mode global-fci-mode fci-mode (lambda()(fci-mode 1)))
@@ -295,18 +295,18 @@ you should place your code here."
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
 (custom-set-variables
-;; custom-set-variables was added by Custom.
-;; If you edit it by hand, you could mess it up, so be careful.
-;; Your init file should contain only one such instance.
-;; If there is more than one, they won't work right.
-'(send-mail-function (quote smtpmail-send-it))
-'(smtpmail-smtp-server "smtp.gmail.com")
-'(smtpmail-smtp-service 25))
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(send-mail-function (quote smtpmail-send-it))
+ '(smtpmail-smtp-server "smtp.gmail.com")
+ '(smtpmail-smtp-service 25))
   (custom-set-faces
-;; custom-set-faces was added by Custom.
-;; If you edit it by hand, you could mess it up, so be careful.
-;; Your init file should contain only one such instance.
-;; If there is more than one, they won't work right.
-'(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
-'(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
 )
