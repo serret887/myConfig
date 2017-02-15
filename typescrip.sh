@@ -23,8 +23,8 @@ sudo npm install -g eslint
 
 echo "installing to work with angular 2"
 
-sudo npm install -g angular-cli
-sudo npm install typings --global
+#sudo npm install -g angular-cli
+#sudo npm install typings --global
 echo "configuring to work with emacs hahahahaha"
 
 
